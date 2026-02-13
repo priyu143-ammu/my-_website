@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To My Husband ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 50px;
+            color: #ff1e56;
+            text-shadow: 0 0 20px #ff1e56;
+        }
+
+        h2 {
+            color: #ff4d6d;
+        }
+
+        .date {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .letter {
+            width: 75%;
+            margin: 40px auto;
+            font-size: 20px;
+            line-height: 1.8;
+            background: rgba(255, 30, 86, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 30, 86, 0.3);
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 20px;
+            margin: 30px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #ff1e56;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #ff1e56;
+        }
+
+        #noBtn {
+            background-color: white;
+            color: black;
+            position: absolute;
+        }
+
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 20px;
+            animation: fall linear infinite;
+            color: #ff1e56;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mama 🔥❤️</h1>
+    <h2>From Dec 3… Till Infinity 💍</h2>
+    <div class="date">Our Special Day: Dec 3💞</div>
+
+    <div class="letter">
+        <p><strong>Dinesh ❤️,</strong></p>
+
+        <p>
+        Dec 3 la nee en life la vandha moment…  
+        adhu oru normal day illa.  
+        Adhu en life start aana real chapter 🔥  
+        </p>
+
+        <p>
+        Un voice ketta udane en face la smile varum,  
+        Un message ah pathale enaku romba happy ya irrukum...
+        Un chest tha enku safe place ❤️  
+        </p>
+
+        <p>
+        Mama…  
+        Nee enaku just Purushan illa.  
+        Nee en best friend, en strength, en weakness,  
+        en safe place, en appa, en forever person 💍  
+        </p>
+
+        <p>
+        Un kooda sandhoshama sirikka,  
+        konjam fight panna,  
+        aprom adhuku mela love panna…  
+        Idhellam dhaan enaku dream life ❤️  
+        </p>
+
+        <p>
+        Naan daily love panradhu illa…  
+        Daily un mela innum adhigama fall aaguren 🔥  
+        </p>
+
+        <p>
+        From Dec 3…  
+        nee en life ah full ah eduthutta.  
+        And honestly…  
+        naan unna na yaru kittayum kuduka  maatten 😘  
+        </p>
+
+        <p><strong>
+        Forever un pondati 💍<br>
+        Future Mrs. Dinesh 🔥❤️<br>
+        Only Yours – Priya ❤️‍🔥
+        </strong></p>
+    </div>
+
+    <h2>Will you stay be my husband forever? 😘</h2>
+
+    <button id="yesBtn" class="btn">Forever Yours ❤️</button>
+    <button id="noBtn" class="btn">No 😜</button>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function() {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    document.getElementById("yesBtn").addEventListener("click", function() {
+        document.body.innerHTML = `
+        <h1 style="margin-top:200px;color:#ff1e56;text-shadow:0 0 20px #ff1e56;">
+        Mrs. Dinesh Activated 💍🔥
+        </h1>
+        <h2>From December 3 to Forever ❤️</h2>
+        <p>You are mine. Always. Forever.</p>
+        `;
+    });
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
